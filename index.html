@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-touch-fullscreen" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="Description" content="澎湃，澎湃新闻，澎湃新闻网，新闻与思想，澎湃是植根于中国上海的时政思想类互联网平台，以最活跃的原创新闻与最冷静的思想分析为两翼，是互联网技术创新与新闻价值传承的结合体，致力于问答式新闻与新闻追踪功能的实践。">
+<meta name='Keywords' content="投票,澎湃,澎湃新闻,交互,动画,上海报业,东方早报,上海东方早报">
+<title>澎湃·投票</title>
+<link rel="stylesheet" href="http://image.thepaper.cn/html/static/vote/default/common1.2.css">
+</head>
+<body>
+<div id="turn-box">
+<div class="tb-inner">
+<div class="h2v">
+<div class="imgtip"></div>
+<p>请将手机调至竖屏浏览</p>
+</div>
+</div>
+</div>
+<div class="loadpage" id="loading">
+<div class="tips">
+<div class="tipbox">
+<p id="loadingDesc"></p>
+<p class="loader">
+<img src="http://image.thepaper.cn/html/static/vote/default/loading.png" alt="">
+</p>
+</div>
+</div>
+</div>
+<div class="container" id="mContainer">
+<div class="box" id="cover">
+<div class="zt-logo">
+<h1>投 票</h1>
+</div>
+<div class="ptitle">
+<h1 id="coverTitle"></h1>
+<p id="coverDesc"></p>
+</div>
+<div class="actionbar">
+<a href="#" class="btn-start" id="viewResult" style="display:none">谢谢您的投票！[ 查看结果 ]</a>
+<a href="#" class="btn-start" id="start">开始</a>
+</div>
+</div>
+<div class="box" id="content">
+<div class="topbar">
+<div class="votemark">澎湃投票</div>
+<a href='#' id="preVote" class="prepage"><span></span>上一题</a>
+<div class="voteindex"><span id='voteIndex'>1</span>/<span id="voteNum"></span></div>
+</div>
+<div class="votelist" id="voteList">
+</div>
+</div>
+<div class="box" id="end">
+<div class="topbar">
+<div class="votemark">澎湃投票</div>
+</div>
+<div class="endContainer">
+<div class="vote-results">
+<h1>投票结果</h1>
+<p>共<em id="voteStat"></em>人参与投票</p>
+<div id="voteRlist" class="voterlist">
+</div>
+</div>
+<div class="sharewrap">
+<div id="paper-share" class="paper-share">
+<p class="share-title">分享我的投票结果</p>
+<div class="share-span">
+<a class="jiathis_button_weixin" title="分享到微信"></a>
+<a class="jiathis_button_tsina" title="分享到新浪微博"></a>
+</div>
+</div>
+<a class="appdl" href="http://m.thepaper.cn/app">点击下载澎湃新闻客户端</a>
+</div>
+</div>
+</div>
+</div>
+<div id="pcContainer">
+<div class="wrapper votelist-wrap">
+<div class="container">
+<div class="zt-logo">
+<h1>投 票</h1>
+</div>
+<div class="ptitle">
+<h1 id="pcCoverTitle"></h1>
+<p id="pcCoverDesc"></p>
+</div>
+<div class="actionbar">
+<a href="#" class="btn-start">谢谢您的投票！</a>
+</div>
+<div class="votelist" id="pcVoteList">
+<a href='#' class='submit-opt' id='submitVoteBtn'>提交投票并查看结果</a>
+</div>
+</div>
+</div>
+<div class="wrapper voteresults-wrap">
+<div class="container">
+<div class="vote-results">
+<h1>投票结果</h1>
+<p>共<em id="pcVoteStat"></em>人参与投票</p>
+<div id="pcVoteRlist" class="voterlist">
+</div>
+</div>
+</div>
+</div>
+<div class="wrapper share-wrap">
+<div class="container">
+<div id="paper-share" class="paper-share">
+<div class="share-span">
+<h2>分享</h2> <a class="jiathis_button_weixin" title="分享到微信"></a> <a class="jiathis_button_tsina" title="分享到新浪微博"></a>
+</div>
+</div>
+<div class="qrcode">
+<img src="http://image.thepaper.cn/html/static/vote/default/qcode.png" height="160" width="160" alt="" />
+<p>请下载澎湃新闻手机客户端</p>
+</div>
+</div>
+</div>
+</div>
+<input type="hidden" id="voteID" value="22" />
+<script src="http://image.thepaper.cn/html/static/js/jquery.js"></script>
+<script src="http://image.thepaper.cn/html/static/js/wxjssdk.js"></script>
+<script src="http://image.thepaper.cn/html/static/vote/default/vote1.2.js"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1935763" charset="utf-8"></script>
+<div style="display:none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ed71d4f59acf2e79911e62bb5e9ab28e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+</body>
+</html>
